@@ -40,11 +40,45 @@
 
 ---
 
+## デプロイ先
+
+- **GitHub Pages**: https://himagaku02.github.io/task_board/
+- `main` ブランチへのプッシュで GitHub Actions が自動ビルド＆デプロイ
+
+---
+
+## 技術スタック
+
+| 種別 | 技術 |
+|---|---|
+| UI ライブラリ | React 18 |
+| ビルドツール | Vite 6 |
+| 言語 | JavaScript (JSX) |
+| スタイリング | プレーン CSS (CSS Modules 不使用) |
+| 状態管理 | React `useState` / `useEffect` |
+| 永続化 | `localStorage` |
+| CI/CD | GitHub Actions |
+| ホスティング | GitHub Pages |
+
+---
+
+## コンポーネント命名規約
+
+- **コンポーネントファイル**: PascalCase（例: `TaskItem.jsx`, `TaskList.jsx`）
+- **コンポーネント関数**: PascalCase（例: `export default function TaskBoard()`）
+- **CSS クラス名**: kebab-case（例: `.task-item`, `.delete-btn`）
+- **イベントハンドラ**: `handle` プレフィックス（例: `handleKeyDown`, `handleSubmit`）
+- **状態変数**: camelCase（例: `tasks`, `inputValue`）
+- **ファイル配置**: コンポーネントは `src/` 直下に置く（現状は小規模のため）
+
+---
+
 ## 開発環境
 
 - **OS**: Windows 11
 - **Shell**: PowerShell / Bash
 - **作業ディレクトリ**: `c:\Users\himag\Documents\Claude_Work\Claude_Work\DAY2_task`
+- **開発サーバー起動**: `npm run dev` → http://localhost:5173
 
 ---
 
